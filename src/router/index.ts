@@ -1,8 +1,9 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
-  history: createWebHistory('/2-1-1-2.github.io/'),
+  history: createWebHashHistory(),
+
   routes: [
     {
       path: '/',

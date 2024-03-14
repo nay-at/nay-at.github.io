@@ -1,104 +1,159 @@
 <script setup lang="ts">
-
-import * as _page from "../assets/page.ts"
+/* import * as _page from '../assets/page.ts' */
 </script>
-
 
 <template>
-<main>
-  <header>
-    <h2><span>Table</span> of content</h2>
-  </header>
-  <section>
-    <ul class='indexes'>
-      <li data-index='0'>01</li>
-      <li data-index='1'>02</li>
-      <li data-index='2'>03</li>
-      <li data-index='3'>04</li>
-    </ul>
-    <ul class='tabs'>
-      <li class='tab'>
-        <article class='tab-content'>
-          <h3>Midnight Station</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Voluptas nihil sequi doloribus obcaecati. Aut vel, recusandae ipsa
-          voluptate blanditiis nemo magnam sit modi architecto officia
-          maiores magni. Necessitatibus, iste aut.</p>
-          <button>Read More</button>
-        </article>
-        <div class='tab-image'><img src='https://picsum.photos/id/345/1000/600'></div>
-      </li>
-      <li class='tab'>
-        <article class='tab-content'>
-          <h3>The Hitchhiker</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Voluptas nihil sequi doloribus obcaecati. Aut vel, recusandae ipsa
-          voluptate blanditiis nemo magnam sit modi architecto officia
-          maiores magni. Necessitatibus, iste aut.</p>
-          <button>Read More</button>
-        </article>
-        <div class='tab-image'><img src='https://picsum.photos/id/352/1000/600'></div>
-      </li>
-      <li class='tab'>
-        <article class='tab-content'>
-          <h3>Missing Pages</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Voluptas nihil sequi doloribus obcaecati. Aut vel, recusandae ipsa
-          voluptate blanditiis nemo magnam sit modi architecto officia
-          maiores magni. Necessitatibus, iste aut.</p>
-          <button>Read More</button>
-        </article>
-        <div class='tab-image'><img src='https://picsum.photos/id/444/1000/600'></div>
-      </li>
-      <li class='tab'>
-        <article class='tab-content'>
-          <h3>Uninvited Guests</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Voluptas nihil sequi doloribus obcaecati. Aut vel, recusandae ipsa
-          voluptate blanditiis nemo magnam sit modi architecto officia
-          maiores magni. Necessitatibus, iste aut.</p>
-          <button>Read More</button>
-        </article>
-        <div class='tab-image'><img src='https://picsum.photos/id/451/1000/600'></div>
-      </li>
-    </ul>
-  </section>
-</main>
-</template>
+  <div
+    class="overflow-hidden h-screen flex justify-center items-center bg-purple-200 relative -z-20"
+  >
+    <div class="px-4 py-5 sm:p-6">
+      <!-- Card Markup Starts -->
+      <div class="w-80 h-96 bg-white flex flex-col items-center shadow-lg rounded p-4">
+        <div class="border-8 border-indigo-700 w-full">
+          <!-- TOP -->
+          <div class="flex">
+            <div class="flex flex-col w-20">
+              <div class="h-20 bg-orange-400 border-b-8 border-indigo-700 dot-pattern">
+                <!-- 1.1 -->
+              </div>
+              <div
+                class="text-md space-y-1 bg-indigo-400 text-indigo-100 text-center h-20 font-extrabold"
+              >
+                <p>MO</p>
+                <p>MO</p>
+                <p>MO</p>
+              </div>
+            </div>
+            <div
+              class="flex-1 bg-cyan-200 border-l-8 border-indigo-700 text-indigo-700 text-8xl font-bold text-center pt-6 arial-black"
+            >
+              MO
+            </div>
+          </div>
 
-<script lang="ts">
-export default {
-  init() {},
-  computed: {
-    
-  },
-  data() {
-    return{
-    page_int: () => this.showTab(0)}
-  },
-  mounted() {
-  },
-  watch: {
-  },
-  methods: {
-    showTab: function(i) {
-  indexes[i].style.borderColor = 'rgba(211,38,38,0.6)';
-  tabs[i].style.opacity = 1;
-  tabs[i].style.zIndex = 5;
-  tabs[i].classList.add('active');
-  contents[i].classList.add('active');
-},
+          <!-- BOTTOM -->
+          <div class="grid grid-cols-2 grid-flow-row border-t-8 border-indigo-700">
+            <div class="h-20 bg-green-100 border-r-8 border-indigo-700 diagonal-lines-pattern">
+              <!-- 03 -->
+            </div>
+            <div class="bg-teal-400 grid-pattern">
+              <!-- 04 -->
+            </div>
+          </div>
+        </div>
 
- activate:function(e) {
-  if (!e.target.matches('.indexes li')) return;
-  reset();
-  showTab(e.target.dataset.index);
+        <div class="w-full flex flex-1 w-full items-end justify-around rounded-b-lg">
+          <div class="text-xs font-semibold text-indigo-800">
+            <span class="block"> MOMO Art </span>
+            <span class="block"> Is the most popular </span>
+            <span class="block"> Design space </span>
+          </div>
+          <div class="border-8 border-indigo-700 flex text-sm">
+            <i class="text-xl bg-yellow-400 border-r-8 border-indigo-700 p-1 fa-solid fa-star"></i>
+            <button class="bg-white px-2">MOMO ART</button>
+          </div>
+        </div>
+      </div>
+      <!-- Card Markup Ends -->
+    </div>
+
+    <div class="px-4 py-5 sm:p-6">
+      <!-- Card Markup Starts -->
+      <div class="w-80 h-96 bg-purple-300 flex flex-col items-center shadow-lg rounded p-4">
+        <div class="border-8 border-indigo-700 w-full">
+          <!-- TOP -->
+          <div class="flex">
+            <div class="flex flex-col w-20">
+              <div
+                class="h-20 border-b-8 border-indigo-700 font-extrabold text-md text-indigo-700 text-center"
+              >
+                <p>MO</p>
+                <p>MO</p>
+                <p>MO</p>
+              </div>
+              <div class="h-20 bg-amber-400 grid-pattern">
+                <!-- 1.2 -->
+              </div>
+            </div>
+            <div
+              class="flex-1 bg-yellow-300 border-l-8 border-indigo-700 text-indigo-700 text-8xl font-bold text-center pt-6 arial-black"
+            >
+              MO
+            </div>
+          </div>
+
+          <!-- BOTTOM -->
+          <div class="grid grid-cols-2 grid-flow-row border-t-8 border-indigo-700">
+            <div class="h-20 bg-orange-400 border-r-8 border-indigo-700 dot-pattern">
+              <!-- 03 -->
+            </div>
+            <div class="bg-green-100 diagonal-lines-pattern">
+              <!-- 04 -->
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full flex flex-1 w-full items-end justify-around rounded-b-lg">
+          <div class="text-xs font-semibold text-indigo-800">
+            <span class="block"> MOMO Art </span>
+            <span class="block"> Is the most popular </span>
+            <span class="block"> Design space </span>
+          </div>
+          <div class="border-8 border-indigo-700 flex text-sm cursor-pointer">
+            <i class="text-xl bg-yellow-400 border-r-8 border-indigo-700 p-1 fa-solid fa-star"></i>
+            <button class="bg-white px-2">MOMO ART</button>
+          </div>
+        </div>
+      </div>
+      <!-- Card Markup Ends -->
+    </div>
+  </div>
+  <div class="absolute bottom-0">
+    Design Inspiration:
+    <a
+      class="font-semibold"
+      target="_blank"
+      href="https://www.behance.net/gallery/88025961/MOMO-Design"
+    >
+      MOMO Design
+    </a>
+  </div>
+  <!--  PROPS
+props: {
+  class: '',
+  data: {}
+  config: {}
 }
-      
-  },
-  created() {
-    window.addEventListener('load',this.page_init,false);
-window.addEventListener('click',this.page_init,false);
-  }
+--></template>
+
+<style scoped>
+:root {
+  --currentColor: #fff;
 }
-</script>
+
+.arial-black {
+  font-family: Arial Black;
+}
+.dot-pattern {
+  background-image: radial-gradient(rgb(253 224 71) 3px, transparent 2px);
+  background-size: calc(10 * 1px) calc(10 * 1px);
+  background-color: rgba(224, 255, 255, 0.5);
+}
+
+.grid-pattern {
+  background-image: linear-gradient(var(--currentColor) 4px, transparent 4px),
+    linear-gradient(to right, var(--currentColor) 4px, transparent 2px);
+  background-size: 14px 14px;
+}
+
+.diagonal-lines-pattern {
+  background-image: repeating-linear-gradient(
+    45deg,
+    orange 0,
+    orange 4px,
+    transparent 0,
+    transparent 50%
+  );
+  background-size: 16px 16px;
+}
+</style>

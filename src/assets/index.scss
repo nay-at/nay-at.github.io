@@ -1,3 +1,453 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ############ MIXINS  ############## */
+
+// neon borders
+@mixin neon-border($color,$rgba,$inset,$x,$y){
+  // $color - border color, $rgba - shadow, $inset - true/false
+  border: 2px solid $color;
+  @if $inset == 'true' {
+    -webkit-box-shadow: 0px 0px $x $y $rgba, inset 0px 0px $x $y $rgba;
+    -moz-box-shadow:    0px 0px $x $y $rgba, inset 0px 0px $x $y $rgba;
+    box-shadow:         0px 0px $x $y $rgba, inset 0px 0px $x $y $rgba;
+  }@else if $inset == 'false'{
+    -webkit-box-shadow: 0px 0px $x $y $rgba;
+    -moz-box-shadow:    0px 0px $x $y $rgba;
+    box-shadow:         0px 0px $x $y $rgba;
+  }
+}
+
+// scan line and opacity effect animation
+@mixin scanOpacity($background){
+
+  // if $background == true  move background if no just animate opacity
+  -webkit-animation: ScanLine 10s ease-in-out infinite;
+  -moz-animation: ScanLine 10s ease-in-out infinite;
+  animation: ScanLine 10s ease-in-out infinite;
+
+  @if $background == "true"{
+    @-webkit-keyframes ScanLine {
+      0%{background-position:51% 0%; opacity: 0.9}
+      10%{opacity: 0.8}
+      20%{opacity: 0.7}
+      30%{opacity: 0.8}
+      40%{opacity: 0.9}
+      50%{background-position:50% 100%;opacity: 1}
+      60%{opacity: 0.9}
+      70%{opacity: 0.6}
+      80%{opacity: 0.9}
+      90%{opacity: 0.8}
+      100%{background-position:51% 0%;opacity: 0.9}
+  }
+    @-moz-keyframes ScanLine {
+      0%{background-position:51% 0%; opacity: 0.9}
+      10%{opacity: 0.8}
+      20%{opacity: 0.7}
+      30%{opacity: 0.8}
+      40%{opacity: 0.9}
+      50%{background-position:50% 100%;opacity: 1}
+      60%{opacity: 0.9}
+      70%{opacity: 0.6}
+      80%{opacity: 0.9}
+      90%{opacity: 0.8}
+      100%{background-position:51% 0%;opacity: 0.9}
+    }
+    @keyframes ScanLine {
+      0%{background-position:51% 0%; opacity: 0.9}
+      10%{opacity: 0.8}
+      20%{opacity: 0.7}
+      30%{opacity: 0.8}
+      40%{opacity: 0.9}
+      50%{background-position:50% 100%;opacity: 1}
+      60%{opacity: 0.9}
+      70%{opacity: 0.6}
+      80%{opacity: 0.9}
+      90%{opacity: 0.8}
+      100%{background-position:51% 0%;opacity: 0.9}
+    }
+}@else{
+
+    @-webkit-keyframes ScanLine {
+       0%{opacity: 0.8}
+       10%{opacity: 0.5;}
+       20%{opacity: 0.9}
+       30%{opacity: 0.7}
+       40%{opacity: 0.9}
+       50%{opacity: 1}
+       60%{opacity: 0.9}
+       70%{opacity: 0.6}
+       80%{opacity: 0.9}
+       90%{opacity: 0.8}
+       100%{opacity: 0.9}
+    }
+    @-moz-keyframes ScanLine {
+      0%{opacity: 0.8}
+      10%{opacity: 0.5}
+      20%{opacity: 0.9}
+      30%{opacity: 0.7}
+      40%{opacity: 0.9}
+      50%{opacity: 1}
+      60%{opacity: 0.9}
+      70%{opacity: 0.6}
+      80%{opacity: 0.9}
+      90%{opacity: 0.8}
+      100%{opacity: 0.9}
+    }
+    @keyframes ScanLine {
+      0%{opacity: 0.8}
+      10%{opacity: 0.5}
+      20%{opacity: 0.9}
+      30%{opacity: 0.7}
+      40%{opacity: 0.9}
+      50%{opacity: 1}
+      60%{opacity: 0.9}
+      70%{opacity: 0.6}
+      80%{opacity: 0.9}
+      90%{opacity: 0.8}
+      100%{opacity: 0.9}
+    }
+  }
+}
+
+// glitch effect
+@mixin glitchEffect(){
+  -webkit-animation: Glitch 10s ease-in-out infinite;
+  -moz-animation: Glitch 10s ease-in-out infinite;
+  animation: Glitch 10s ease-in-out infinite;
+
+  @-webkit-keyframes Glitch {
+    0%{}
+    9.9%{-webkit-transform:skew(0deg);}
+    10%{-webkit-transform:skew(1deg);}
+    10.1%{-webkit-transform:skew(0deg);}
+    89.9%{-webkit-transform:skew(0deg);}
+    90%{-webkit-transform:skew(-4deg);}
+    90.1%{-webkit-transform:skew(0deg);}
+    100%{}
+  }
+  @-moz-keyframes Glitch {
+    0%{}
+    9.9%{-webkit-transform:skew(0deg);}
+    10%{-webkit-transform:skew(1deg);}
+    10.1%{-webkit-transform:skew(0deg);}
+    89.9%{-webkit-transform:skew(0deg);}
+    90%{-webkit-transform:skew(-4deg);}
+    90.1%{-webkit-transform:skew(0deg);}
+    100%{}
+  }
+  @keyframes Glitch {
+    0%{}
+    9.9%{-webkit-transform:skew(0deg);}
+    10%{-webkit-transform:skew(1deg);}
+    10.1%{-webkit-transform:skew(0deg);}
+    89.9%{-webkit-transform:skew(0deg);}
+    90%{-webkit-transform:skew(-4deg);}
+    90.1%{-webkit-transform:skew(0deg);}
+    100%{}
+  }
+}
+
+@mixin cursorBlink($time){
+  -webkit-animation: Blink $time ease infinite;
+  -moz-animation: Blink $time ease infinite;
+  animation: Blink $time ease infinite;
+
+  @-webkit-keyframes Blink {
+     0%{opacity: 0}
+     50%{opacity: 1}
+     100%{opacity: 0}
+  }
+  @-moz-keyframes Blink {
+    0%{opacity: 0}
+    50%{opacity: 1}
+    100%{opacity: 0}
+  }
+  @keyframes Blink {
+    0%{opacity: 0}
+    50%{opacity: 1}
+    100%{opacity: 0}
+  }
+}
+
+/* ############ END/MIXINS  ############## */
+
+/* ############ COLORS  ############## */
+
+$bukner : #141f23;
+$black-pearl : #051D29;
+$spray: #93EDF5;
+$picton-blue: #4BA0E3;
+$iceberg:#d9f2f4;
+$dairy-cream:#F7E3AF;
+$blosom: #D4AFB9;
+$burnt-siennaRGBA:rgba(240, 93, 94, 0.78);
+$cream-canRGBA: rgba(239, 199, 97, 0.78);
+$curious-blueRGBA: rgba(16, 81, 139, 0.78);
+$aquaRGBA: rgba(0, 255, 255, 0.83);
+
+
+/* ############ END/COLORS  ############## */
+
+/* ############ TYPOGRAPHY  ############## */
+
+
+
+h2{
+  font-family: 'Black Ops One', cursive;
+  font-size: 30px;
+  margin: 10px;
+}
+
+// links
+a{
+  color: $iceberg;
+  text-decoration: none;
+  transition: all 1s ease;
+
+  // square brackets
+  &.brackets{
+    padding-bottom: 2px;
+    &::before{
+      content:'[ ';
+    }
+    &::after{
+      content:' ]';
+    }
+  }
+  &:hover, &:active, &:focus{
+    background: $iceberg;
+    color: black;
+  }
+}
+
+/* ############ END/TYPOGRAPHY  ############## */
+
+/* ############ BUTTONS  ############## */
+
+.btn{
+  padding: 5px;
+  margin: 5px;
+  color:black;
+  background: $spray;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: none;
+  font-weight: bold;
+
+  // neon border effect
+  @include neon-border($spray,$curious-blueRGBA,'false',4px,2px);
+
+  &:hover{
+    background: transparent;
+    color: $spray;
+    text-shadow: 0px 0px 5px $aquaRGBA;
+  }
+
+}
+
+/* ############ END/BUTTONS  ############## */
+
+/* ############ BASE  ############## */
+
+body{
+  
+  font-size: 16px;
+  font-family: 'Source Code Pro', monospace;
+  color: $spray;
+  text-shadow: 0px 0px 5px $aquaRGBA;
+  background:$black-pearl;
+
+
+}
+
+//neon border
+.border{
+  &.blue{
+    @include neon-border($picton-blue,$curious-blueRGBA,'true',4px,2px);
+  }
+  &.red{
+    @include neon-border($blosom,$burnt-siennaRGBA,'false',2px,1px);
+  }
+
+}
+
+.cursor{
+  color: $spray;
+  background: transparent;
+  text-shadow: 0px 0px 5px $aquaRGBA;
+
+  // blinking cursor animation
+  @include cursorBlink(2s);
+}
+
+.float-left{
+  float:left;
+
+}
+.clear{
+  clear: both;
+}
+/* ############ END/BASE  ############## */
+
+/* ############ CONTAINER  ############## */
+
+.container{
+  
+  width: 100lvw;
+
+  .wrapper{
+    width: 99vw;
+    padding: 5px;
+
+    // glitch effect
+    @include glitchEffect();
+
+  }
+}
+
+/* ############ END/CONTAINER  ############## */
+
+/* ############ QUOTE - MACHINE  ############## */
+
+.quote-machine{
+  float: left;
+  margin: 5px;
+  width: 95vw;
+
+}
+
+header{
+  margin-bottom: 2px;
+  min-height: 50px;
+  position: relative;
+  span{
+    position:absolute;
+    right: 5px;
+    bottom: 5px;
+  }
+}
+
+main{
+  margin-bottom: 2px;
+  padding: 5px;
+  position: relative;
+  min-height: 300px;
+  
+
+
+  blockquote{
+    position: relative;
+    min-height: 130px;
+    margin: 10px;
+
+    .author{
+      margin-top: 10px;
+      float: right;
+
+    }
+    .warning{
+      padding-top: 10px;
+      text-align: center;
+      >span{
+        color: black;
+        background: $blosom;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-shadow: none;
+      }
+    }
+  }
+
+  .block{
+    position: absolute;
+    bottom: 15px;
+  }
+
+}
+
+  .page-author{
+    text-align: center;
+  }
+
+footer{
+  padding-top: 5px;
+}
+
+/* ############ END/QUOTE - MACHINE  ############## */
+
+/* ############ MEMORY MODULE  ############## */
+
+.mem{
+  width: 105px;
+  margin: 5px;
+  padding: 2px;
+  float: left;
+  ul{
+    padding-left: 2px;
+    padding-top: 2px;
+    li{
+      list-style:none;
+      display: inline-block;
+      margin: -4px;
+
+    }
+  }
+  .module{
+    margin: 3px;
+
+    width: 6px;
+    height: 16px;
+    display: inline-block;
+    background: $spray;
+
+    @include neon-border($spray,$aquaRGBA,'false',2px,1px);
+  }
+
+  header{
+    margin: 5px 5px 5px 0;
+    min-height: 20px;
+    h2{
+      font-size: 30px;
+      margin: 5px;
+    }
+  }
+
+  .cell{
+    float: left;
+  }
+
+  // when clicked on new quote
+  .opened{
+    color:$blosom;
+    text-shadow: 0px 0px 5px $burnt-siennaRGBA;
+    .module{
+      transition: background 2s,border 2s;
+      background: $blosom;
+      @include neon-border($blosom,$burnt-siennaRGBA,'false',2px,1px);
+    }
+  }
+}
+
+/* ############ END/MEMORY MODULE  ############## */
+
+
+
+.type {
+         display: flex;
+         margin: 4%;
+         padding: 0.2em;
+         
+      }
+      .type_text {
+         font-family: "Courier Monospace";
+         font-size: 2em;
+        
+      }
+      .type_text:last-of-type {
+         animation: type 0.33s infinite;
+      }
+      @keyframes type{
+         to { opacity: .0; }
+      }

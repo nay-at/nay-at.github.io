@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;600&family=Pixelify+Sans&family=VT323&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 :root {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Courier Prime", monospace;
   font-weight: 200;
   --bg: #0c0623;
   --border: #ffade2;
@@ -69,7 +71,7 @@ div {
 
 @font-face {
   font-family: ascii;
-  src: url("./font/IBMPlexMono-Thin.ttf");
+  src: url("./font/IBMPlexMono-Regular.ttf");
 }
 
 pre {
@@ -81,7 +83,7 @@ pre {
 }
 
 input {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Courier Prime", monospace;
   padding: 0px;
   margin: 0px;
   border: none;
@@ -155,8 +157,8 @@ a:hover {
 }
 
 .command {
-  text-shadow: 0 0 7px #fff, 0 0 151px var(--border);
-  color: #fd9bdb;
+  /* text-shadow: 0 0 7px #fff, 0 0 151px var(--border); */
+  color: #ff9951;
 }
 
 .output {
@@ -206,9 +208,13 @@ a:hover {
 }
 
 button {
+  font-size: 16px;
+  font-family: "Courier Prime", monospace;
   background-color: transparent;
   color: #b6aaee;
   border: 0;
+  padding: 0;
+  margin-right: 15px;
 }
 
 button:hover {

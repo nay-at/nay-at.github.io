@@ -28,7 +28,7 @@ const PRE_USER = document.getElementById("pre-user");
 const HOST = document.getElementById("host");
 const USER = document.getElementById("user");
 const PROMPT = document.getElementById("prompt");
-const COMMANDS = ["help", "about", "projects", "whoami", "repo", "banner", "clear"];
+const COMMANDS = ["help", "about", "projects", "whoami", "banner", "credit", "clear"];
 const HISTORY: string[] = [];
 const SUDO_PASSWORD = command.password;
 const REPO_LINK = command.repoLink;
@@ -223,7 +223,7 @@ function commandHandler(input: string) {
       }
       writeLines(PROJECTS);
       break;
-    case "repo":
+    case "credit":
       writeLines(["Redirecting to github.com...", "<br>"]);
       setTimeout(() => {
         window.open(REPO_LINK, "_blank");
@@ -401,4 +401,4 @@ const initEventListeners = () => {
 
 initEventListeners();
 
-export { commandHandler, userInputHandler, enterKey, COMMANDS };
+export { commandHandler, userInputHandler, enterKey, COMMANDS, writeLines };

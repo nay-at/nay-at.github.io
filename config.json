@@ -1,24 +1,23 @@
 {
   "ascii": [
-"██████╗  ██╗ ██╗██████╗ ",
-"╚════██╗███║███║╚════██╗",
-" █████╔╝╚██║╚██║ █████╔╝",
-"██╔═══╝  ██║ ██║██╔═══╝ ",
-"███████╗ ██║ ██║███████╗",
-"╚══════╝ ╚═╝ ╚═╝╚══════╝",
-"                        "
-  ],
+"                                         .'`'.'`'.",
+"                                     .''.`.  :  .`.''.",
+"                                     '.    '. .'    .'",
+"                                     .```  .' '.  ```.",
+"                                     '..',`  :  `,'..'",
+"                                          `-'`'-`  ",
+"                                                   "],
   "title": "2-1-1-2.exe",
   "username": "visitor",
   "hostname": "2-1-1-2",
-  "password": "050823",
+  "password": "1710",
   "repoLink": "https://github.com/nasan016/webshell",
   "social": {
-    "email": "your@email.com",
-    "github": "yourgithub",
-    "linkedin": "you"
+    "email": "tanya.francois@outlook.fr",
+    "github": "https://github.com/2-1-1-2",
+    "linkedin": "tanya-fran%C3%A7ois-b3a186273/"
   },
-  "aboutGreeting": "Hi stranger. Welcome to WebShell.",
+  "aboutGreeting": "Hello, you can contact me and see my work here!",
   "projects": [
     [
       "GofeR",
@@ -34,7 +33,7 @@
   "colors": {
     "background": "#0C0623",
     "foreground": "#F8DDE5",
-    "banner": "#FF9951",
+    "banner": "#fe6bc9",
     "border": {
       "visible": true,
       "color": "#FFADE2"

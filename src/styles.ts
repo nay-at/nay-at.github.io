@@ -28,13 +28,13 @@ import command from "../config.json" assert { type: "json" };
     style.sheet.insertRule("#bars {display: none}");
     style.sheet.insertRule("main {border: none}");
   } else {
-    style.sheet.insertRule(`#bars {background: ${command.colors.background}}`);
+    /*     style.sheet.insertRule(`#bars {background: ${command.colors.background}}`);
     style.sheet.insertRule(`main {border-color: ${command.colors.border.color}}`);
     style.sheet.insertRule(`#bar-1 {background: ${command.colors.border.color}; color: ${command.colors.background}}`);
     style.sheet.insertRule(`#bar-2 {background: ${command.colors.border.color}}`);
     style.sheet.insertRule(`#bar-3 {background: ${command.colors.border.color}}`);
     style.sheet.insertRule(`#bar-4 {background: ${command.colors.border.color}}`);
-    style.sheet.insertRule(`#bar-5 {background: ${command.colors.border.color}}`);
+    style.sheet.insertRule(`#bar-5 {background: ${command.colors.border.color}}`); */
   }
 
   style.sheet.insertRule(background);

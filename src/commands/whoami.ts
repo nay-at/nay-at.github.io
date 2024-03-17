@@ -1,9 +1,12 @@
 const whoamiObj = {
-  "message" : [
+  message: [
     [
-      "In the kaleidoscope of existence,",
-      "I am but a reflection questioning the enigma - "
-    ],
+      "I'm Tanya, a second-year student at a multimedia engineering school (IMAC).",
+      "I'm currently looking for a 3-month (12-week) internship starting May 6. ",
+      "I'm mainly looking for work in the fields of video game programming and web development. ",
+      "During my studies, I worked on a number of projects that gave me a wide range of skills",
+      "that I'm sure I'll be able to put to good use during my internship. - ",
+    ] /* 
     [
       "Amidst cosmic whispers,",
       "I navigate the maze of self-discovery,",
@@ -23,12 +26,12 @@ const whoamiObj = {
       "In the tapestry of reality,",
       "I am the thread of self-inquiry,",
       "weaving through the eternal question - "
-    ],
+    ], */,
   ],
-}
+};
 
-export const createWhoami = () : string[] => {
-  const whoami : string[] = [];  
+export const createWhoami = (): string[] => {
+  const whoami: string[] = [];
   const r = Math.floor(Math.random() * whoamiObj.message.length);
   whoami.push("<br>");
 
@@ -41,5 +44,5 @@ export const createWhoami = () : string[] => {
 
   whoami.push("<br>");
 
-  return whoami
-}
+  return whoami;
+};

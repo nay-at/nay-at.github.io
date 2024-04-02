@@ -33,7 +33,7 @@ body {
 }
 
 html {
-  overflow: auto;
+  word-wrap: break-word;
 }
 
 body {
@@ -60,9 +60,32 @@ main::-webkit-scrollbar {
 p {
   display: block;
   line-height: 22px;
-  animation: typing 0.5s steps(30, end);
-  white-space: nowrap;
-  overflow: hidden;
+
+  /* animation: typing 0.5s steps(30, end);
+  white-space: nowrap; */
+
+  word-wrap: break-word;
+}
+td {
+  padding-right: 15px;
+}
+
+.project_title {
+  width: max(21.5lvw, 100px);
+}
+.project_title:hover::before {
+  content: "> ";
+
+  color: #fe6bc9;
+}
+a {
+  text-decoration: none;
+  color: #feb9e5;
+  padding-right: 5px;
+}
+
+a:hover {
+  color: #fe6bc9;
 }
 
 div {
@@ -93,15 +116,6 @@ input {
   color: #ff7685;
   caret-color: var(--prompt-default);
   width: 50%;
-}
-
-a {
-  color: #b6aaee;
-}
-
-a:hover {
-  background-color: var(--border);
-  color: var(--bg);
 }
 
 #bars {

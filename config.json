@@ -14,20 +14,59 @@
   "repoLink": "https://github.com/nasan016/webshell",
   "social": {
     "email": "tanya.francois@outlook.fr",
-    "github": "https://github.com/2-1-1-2",
+    "github": "2-1-1-2",
     "linkedin": "tanya-fran%C3%A7ois-b3a186273/"
   },
   "aboutGreeting": "Hello, you can contact me and see my work here!",
   "projects": [
     [
-      "GofeR",
-      "Vue.js reactivity in Go.",
-      "https://github.com/nasan016/gofer"
+      "AdBlockNot",
+      "Game created as part of gamejam 64. This year's theme was 'depth' and the constraint was 'mise en abyme'.",
+      "https://21-12exe.itch.io/adblocknot",
+      "GDScript / Design",
+      "2024"
     ],
     [
-      "WebShell",
-      "Terminal styled website.",
-      "https://github.com/nasan016/webshell"
+      "UGE explorer",
+      "Digital guided tour of the campus. Creation a website using VueJS and its design. We also created the itineraries for visiting the Descartes campus (Champs-sur-Marne).",
+      "https://ugexplorer.netlify.app/",
+      "Vue.js / SCSS / Design",
+      "2024 - Now"
+    ],
+    [
+      "La liseuse de bonnes aventures <br> <br>(The reader of good adventures)",
+      "A very quick WEB project to illustrate poems written during a writing workshop.",
+      "https://la-liseuse-de-bonnes-aventures.netlify.app/",
+      "HTML / CSS / JS",
+      "2022"
+    ],
+    [
+      "GhostHunt",
+      "Participation in a network programming project aimed at putting into practice the concepts studied in class (TCP and UDP protocols). The aim was to develop a multiplayer game with the ability to create simultaneous games and facilitate communication between players via an integrated messaging system.",
+      "https://github.com/niryline/ProgReseaux",
+      "C / Java",
+      "2022"
+    ],
+    [
+      "Narai",
+      "Design and development of a Japanese language learning website integrating various APIs, with the aim of creating an interactive teaching platform",
+      "https://github.com/2-1-1-2/Narai",
+      "VueJS / SCSS",
+      "2024 - Now"
+    ],
+    [
+      "Light Corridor",
+      "As a project for the 'Image Synthesis' course, we had to create a 3D game in which we travelled a long path full of obstacles using a ball.",
+      "https://github.com/2-1-1-2/The-IMAC-Light-Corridor",
+      "GLFW / C++",
+      "2023"
+    ],
+    [
+      "Infinite Loop",
+      "Creating a loop using boids to highlight climate issues.",
+      "https://github.com/2-1-1-2/Boids/blob/main/Animation_Boids_LOOP.gif",
+      "P5JS",
+      "2022"
     ]
   ],
   "colors": {

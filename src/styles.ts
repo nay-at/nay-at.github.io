@@ -14,9 +14,9 @@ import command from "../config.json" assert { type: "json" };
   const user = `#user {color: ${command.colors.prompt.user}}`;
   const prompt = `#prompt {color: ${command.colors.prompt.default}}`;
   const banner = `pre {color: ${command.colors.banner}}`;
-  const link = `a {color: ${command.colors.link.text}}`;
-  const linkHighlight = `a:hover {background: ${command.colors.link.highlightColor}}`;
-  const linkTextHighlight = `a:hover {color: ${command.colors.link.highlightText}}`;
+  /*const link = `a {color: ${command.colors.link.text}}`;
+     const linkHighlight = `a:hover {background: #ff7685; }`;
+  const linkTextHighlight = `a:hover {color: white}`; */
   const commandHighlight = `.command {color: ${command.colors.commands.textColor}}`;
   const keys = `.keys {color: ${command.colors.banner}}`;
 
@@ -48,9 +48,9 @@ import command from "../config.json" assert { type: "json" };
   style.sheet.insertRule(user);
   style.sheet.insertRule(prompt);
   style.sheet.insertRule(banner);
-  style.sheet.insertRule(link);
+  /*   style.sheet.insertRule(link);
   style.sheet.insertRule(linkHighlight);
-  style.sheet.insertRule(linkTextHighlight);
+  style.sheet.insertRule(linkTextHighlight); */
   style.sheet.insertRule(commandHighlight);
   style.sheet.insertRule(keys);
 })();

@@ -7,7 +7,14 @@ const createProject = (): string[] => {
   const SPACE = "&nbsp;";
 
   projects.push("<br>");
-
+  function sortFunction(a: any, b: any) {
+    if (a[4] === b[4]) {
+      return 0;
+    } else {
+      return a[4] > b[4] ? -1 : 1;
+    }
+  }
+  command.projects.sort(sortFunction);
   command.projects.forEach((ele) => {
     let link = `<table><tr><td class="project_title"><a href="${ele[2]}" target="_blank">${ele[0]}</a> <br> ${ele[3]}<br> ${ele[4]}</td>`;
     string += SPACE.repeat(2);

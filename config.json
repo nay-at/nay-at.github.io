@@ -26,19 +26,26 @@
       "GDScript / Design",
       "2024"
     ],
+        [
+      "3D creation",
+      "Small 3D projects created during the 3D Creation course",
+      "Crea3D.mp4",
+      "Blender",
+      "2023"
+    ],
     [
       "Animation Animal Crossing",
-      "Petite animation sur blender réalisé dans le cadre du cours de Création 3D",
+      "Short Blender animation produced as part of the 3D Creation course",
       "AC_3D_S3.mp4",
       "Blender",
       "2023"
     ],
         [
-      "Création 3D",
-      "Petits projets 3D réalisés durant le cours Création 3D",
-      "Crea3D.mp4",
-      "Blender",
-      "2023"
+      "Trick or Treat",
+      "World created in OpenGL in which the player must avoid will-o'-the-wisp boids within the given time limit \n \nI coded part of the world, but also made the <a href=\"trick_or_treat_modèle.png\">3D models</a>.",
+      "https://github.com/2-1-1-2/Projet_MPS",
+      "OpenGL, Blender",
+      "2024 - Now"
     ],
     [
       "UGE explorer",

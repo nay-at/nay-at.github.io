@@ -20,6 +20,13 @@
   "aboutGreeting": "Hello, you can contact me and see my work here!",
   "projects": [
     [
+      "Coffee Paws",
+      "Project carried out during my internship at HDM. I was responsible for the overall management of Coffee Paws, including coordinating the team's tasks and monitoring the project's progress. At the same time, I contributed to the 3D modelling and took charge of certain aspects of the development.",
+      "",
+      "Unity / Blender / C#",
+      "2024"
+    ],
+    [
       "AdBlockNot",
       "Game created as part of gamejam 64. This year's theme was 'depth' and the constraint was 'mise en abyme'.",
       "https://21-12exe.itch.io/adblocknot",

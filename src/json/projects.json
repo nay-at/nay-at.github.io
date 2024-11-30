@@ -1,0 +1,113 @@
+{  
+    "AdBlockNot": {
+      "title": "AdBlockNot",
+      "description": {
+        "en": "Game created as part of gamejam 64. This year's theme was 'depth' and the constraint was 'mise en abyme'.",
+        "fr": "Jeu créé dans le cadre de la gamejam 64. Le thème de cette année était 'profondeur' et la contrainte était 'mise en abyme'."
+      },
+      "url": "https://21-12exe.itch.io/adblocknot",
+      "technologies": ["GDScript", "Design"],
+      "year": "2024",
+      "more":""
+    },
+    "3D Course's creation": {
+      "title": "3D Course's creation",
+      "description": {
+        "en": "Small 3D projects created during the 3D Creation course",
+        "fr": "Petits projets 3D créés lors du cours de création 3D"
+      },
+      "url": "Crea3D.mp4",
+      "technologies": ["Blender"],
+      "year": "2023",
+      "more":""
+    },
+    "Animation Animal Crossing": {
+      "title": "Animation Animal Crossing",
+      "description": {
+        "en": "<a href=\"Screenshot_Note_Intention_Assets.pdf\">Short Blender animation produced</a> as part of the 3D Creation course",
+        "fr": "<a href=\"Screenshot_Note_Intention_Assets.pdf\">Courte animation Blender produite</a> dans le cadre du cours de création 3D"
+      },
+      "video": "AC_3D_S3.mp4",
+      "technologies": ["Blender"],
+      "year": "2023",
+      "more":""
+    },
+    "Trick or Treat": {
+      "title": "Trick or Treat",
+      "description": {
+        "en":  "World created in OpenGL in which the player must avoid will-o'-the-wisp boids within the given time limit \n \nI coded part of the world, but also made the <a href=\"trick_or_treat_modèle.png\">3D models</a>.",
+        "fr": "Monde créé en OpenGL dans lequel le joueur doit éviter les boids de feu follet dans le temps imparti \n \nJ'ai codé une partie du monde, mais j'ai aussi réalisé les <a href=\"trick_or_treat_modèle.png\">modèles 3D</a>."
+      },
+      "url": "https://github.com/2-1-1-2/Projet_MPS",
+      "technologies": ["OpenGL", "Blender"],
+      "year": "2024",
+      "more":""
+    },
+    "UGE explorer": {
+    "title": "UGE explorer",
+      "description": {
+        "en": " Digital guided tour of the campus. Creation a website using VueJS and its design. We also created the itineraries for visiting the Descartes campus (Champs-sur-Marne).",
+        "fr": "Visite guidée numérique du campus. Création d'un site web utilisant VueJS et son design. Nous avons également créé les itinéraires pour visiter le campus Descartes (Champs-sur-Marne)."
+      },
+      "url": "https://ugexplorer.netlify.app/",
+      "technologies": ["Vue.js" , "SCSS" , "Design"],
+      "year": "2024",
+      "more":""
+    },
+    "La liseuse de bonnes aventures ": {
+        "title": {"en": "La liseuse de bonnes aventures", "fr": "The reader of good adventures"},
+      "description": {
+        "en": "A very quick WEB project to illustrate poems written during a writing workshop.",
+        "fr": "Un projet WEB très rapide pour illustrer des poèmes écrits lors d'un atelier d'écriture."
+      },
+      "url": "https://la-liseuse-de-bonnes-aventures.netlify.app/",
+      "technologies": ["HTML", "CSS", "JS"],
+      "year": "2022",
+      "more":""
+    },
+    "GhostHunt": {
+        "title": "GhostHunt",
+      "description": {
+        "en": "Participation in a network programming project aimed at putting into practice the concepts studied in class (TCP and UDP protocols). The aim was to develop a multiplayer game with the ability to create simultaneous games and facilitate communication between players via an integrated messaging system.",
+        "fr": "Projet de programmation réseau visant à mettre en pratique les concepts étudiés en classe (protocoles TCP et UDP). Le but était de développer un jeu multijoueur avec la possibilité de créer des parties simultanées et de faciliter la communication entre les joueurs via un système de messagerie intégré."
+      },
+      "url": "https://github.com/2-1-1-2/Ghost-Hunt",
+      "technologies": ["C" , "Java"],
+      "year": "2022",
+      "more":""
+    },
+    "Narai": {
+        "title": "Narai",
+      "description": {
+        "en": "Design and development of a Japanese language learning website integrating various APIs, with the aim of creating an interactive teaching platform",
+        "fr": "Conception et développement d'un site web d'apprentissage de la langue japonaise intégrant diverses API, dans le but de créer une plateforme d'enseignement interactive"
+      },
+      "url": "https://github.com/2-1-1-2/Narai",
+      "technologies": ["VueJS", "SCSS"],
+      "year": "2024 - Now",
+      "more":""
+    },
+    "Light Corridor": {
+        "title": "Light Corridor",
+      "description": {
+        "en": "As a project for the 'Image Synthesis' course, we had to create a 3D game in which we travelled a long path full of obstacles using a ball.",
+        "fr": "Dans le cadre du cours de 'Synthèse d'images', nous avons dû créer un jeu 3D dans lequel nous parcourions un long chemin plein d'obstacles en utilisant une balle."
+      },
+      "url": "https://github.com/2-1-1-2/The-IMAC-Light-Corridor",
+      "technologies": ["GLFW", "C++"],
+      "year": "2023",
+      "more":""
+    },
+    "Infinite Loop": {
+        "title": "Infinite Loop",
+      "description": {
+        "en": "Creating a loop using boids to highlight climate issues.",
+        "fr": "Création d'une boucle à l'aide de boids pour mettre en lumière les problèmes climatiques."
+      },
+      "url": "https://github.com/2-1-1-2/Boids/blob/main/Animation_Boids_LOOP.gif",
+      "technologies": ["P5JS"],
+      "year": "2022",
+      "more":""
+      }
+  
+}

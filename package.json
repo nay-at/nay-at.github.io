@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.32",
     "@types/js-yaml": "^4.0.9",
     "gh-pages": "^6.1.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.0"
   },
   "dependencies": {
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "terminal.css": "^0.7.5"
   }
 }

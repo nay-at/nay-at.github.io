@@ -1,0 +1,61 @@
+{
+    "title": {
+        "fr": "Compétences",
+        "en": "Skills"
+    },
+    "title2": {
+        "fr": "Langages de programmation",
+        "en": "Programming Languages"
+    },
+    "Programming Languages": {
+        "fr":["Développement Web","Développement Logiciel","Développement de Jeux"],
+        "en":["Web Development","Software Development","Game Development"],
+        "content": {
+            "Web Development": ["HTML","(S)CSS","JavaScript","PHP","SQL","Node.js","JQuery","Vue.js","React"],
+            "Software Development": ["C","C++","Java","Python","GDScript"],
+            "Game Development": ["C#","GDScript","OpenGL","GLSL","HLSL"]
+        }
+       },
+    "title3": {
+        "fr": "Logiciels",
+        "en": "Software"
+    },
+    "Software":
+    { 
+        "fr":["Développement Logiciel","Développement de Jeux","Design","3D"],
+        "en":["Software Development","Game Development","Design","3D"],
+        "content":{
+            "Software Development": ["VSCode","Git"],
+            "Game Development": ["Unity","Godot"],
+            "Design": ["Photoshop","Illustrator"],
+            "3D": ["Blender"]
+        }
+    },
+    "Languages": {
+        "fr": {
+            "Français": "Langue maternelle",
+            "Anglais": "B2",
+            "Japonais": "B1/N3",
+            "Coréen": "A1"
+        },
+        "en": {
+            "French": "Native",
+            "English": "B2",
+            "Japanese": "B1/N3",
+            "Korean": "A1"
+        },
+        "jp": {
+            "フランス語": "母国語",
+            "英語": "B2",
+            "日本語": "B1/N3",
+            "韓国語": "A1"
+        },
+        "kr": {
+            "프랑스어": "모국어",
+            "영어": "B2",
+            "일본어": "B1/N3",
+            "한국어": "A1"
+        }
+    }
+        
+}

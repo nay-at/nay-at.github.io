@@ -5,11 +5,11 @@
 :root {
   font-family: "Courier Prime", monospace;
   font-weight: 200;
-  --bg: #0c0623;
-  --border: /*#7085ff;*/ hsl(249, 58%, 73%);
+  --bg: /*#0c0623*/ #161126;
+  --border: /*#7085ff;*/ /*hsl(249, 58%, 73%)*/ #c3bced;
   --text: #c3bced /* #f8dde5 */;
   --prompt-default: #a5a7a7;
-  --prompt-1: #fe6bc9;
+  --prompt-1: /* #fe6bc9 */ #6c92ef;
   --prompt-2: #70fdff;
   --prompt-3: #b7aee8;
 }
@@ -258,5 +258,22 @@ input {
   margin: 10px;
 
   border-bottom: var(--prompt-1) solid 2px;
-  background-color: #1e0623;
+  background-color: /* #1e0623 */ #060923;
+}
+
+/* ------------------- summary & details ------------------- */
+details > summary {
+  list-style-type: "[+] ";
+}
+
+details[open] > summary {
+  list-style-type: "[-] ";
+}
+
+details {
+  padding: 0.5rem;
+}
+
+details[open] > summary {
+  margin-bottom: 0.5rem;
 }

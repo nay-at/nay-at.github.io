@@ -2,6 +2,54 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+.App {
+  text-align: center;
+  height: 100%;
+}
+#root {
+  height: calc(100% - calc(2 * 13.5px));
+
+  margin-top: 13.5px;
+  margin-bottom: 13.5px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  /* min-height: 80lvh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* -------- A modifier ------- */
+
 :root {
   font-family: "Courier Prime", monospace;
   font-weight: 200;
@@ -43,7 +91,6 @@ html {
 }
 body {
   width: min(900px, 95%);
-  height: 97.5%;
   padding: 16px;
   box-sizing: border-box;
 }
@@ -51,10 +98,11 @@ body {
 main {
   display: block;
   box-sizing: border-box;
+  /* height: 90lvh; */
   height: 100%;
   border: var(--border) solid 2px;
   border-radius: 2px;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   overflow-x: hidden;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -245,6 +293,8 @@ input {
   background-color: var(--bg);
   border: var(--prompt-2) solid 1px;
   overflow: scroll;
+
+  height: auto;
 
   /* display: flex;
   align-items: center;

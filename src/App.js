@@ -1,41 +1,118 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
+class MenuClass extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuState: this.props.names[0], // Initialize with the first name
+    };
+  }
+
+  changeMenuState(state) {
+    this.setState({ menuState: state });
+    if (this.props.onMenuChange) {
+      this.props.onMenuChange(state); // Notify parent component about the change
+    }
+  }
+
+  render() {
+    return (
+      <div id="menu">
+        {this.props.names.map((item, index) => (
+          <div
+            className="menu"
+            onClick={() => this.changeMenuState(item)}
+            key={index}
+          >
+            {item}
+          </div>
+        ))}
+      </div>
+    );
+  }
+}
+
+MenuClass.defaultProps = {
+  names: ['whoami', 'academics', 'skills', 'projects', 'contact'], // Default menu names
+};
+
 function App() {
+  const [currentMenu, setCurrentMenu] = React.useState('whoami'); // Initialize with the first menu item
+
+  // Handler to update state when the menu changes
+  const handleMenuChange = (menu) => {
+    setCurrentMenu(menu);
+  };
+
+  // Unified function to get content for both header and bottom
+  const getContent = () => {
+    switch (currentMenu) {
+      case 'whoami':
+        return {
+          header: <div>This is the Who Am I section.</div>,
+          bottom: <div>Details about Who Am I.</div>,
+        };
+      case 'academics':
+        return {
+          header: <div>This is the Academics section.</div>,
+          bottom: <div>Details about Academics.</div>,
+        };
+      case 'skills':
+        return {
+          header: <div>This is the Skills section.</div>,
+          bottom: <div>Details about Skills.</div>,
+        };
+      case 'projects':
+        return {
+          header: <div>This is the Projects section.</div>,
+          bottom: <div>Details about Projects.</div>,
+        };
+      case 'contact':
+        return {
+          header: <div>This is the Contact section.</div>,
+          bottom: <div>Details about Contact.</div>,
+        };
+      default:
+        return {
+          header: <div>Welcome! Please select a menu item.</div>,
+          bottom: <div>Additional information will be displayed here.</div>,
+        };
+    }
+  };
+
+  // Extract content for header and bottom
+  const { header, bottom } = getContent();
+
   return (
     <div className="App">
       <main id="main">
-        <div id="bars">
-          <div id="bar-1">Tanya.exe</div>
-
-          <div id="menu">
-            <div class="menu">whoami</div>
-            <div class="menu">academics</div>
-            <div class="menu">skills</div>
-            <div class="menu">projects</div>
-            <div class="menu">contact</div>
+        <div id="window">
+          <div className="container-window">
+            <div id="window-title">Tanya.exe</div>
+            <div className="container-window-icon">
+              <div className="btn"></div>
+              <div className="btn"></div>
+              <div className="btn"></div>
+            </div>
           </div>
+
+          {/* Pass handleMenuChange to MenuClass */}
+          <MenuClass onMenuChange={handleMenuChange} />
         </div>
 
         <div id="content-container">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
+          <div className="content" id="content-top">
+            <header className="App-header">
+              <p>Welcome to Tanya.exe!</p>
+              {header}
+            </header>
+          </div>
+          <div className="content" id="content-bottom">
+            {bottom}
+          </div>
         </div>
-
       </main>
-
     </div>
   );
 }

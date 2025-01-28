@@ -24,7 +24,6 @@
 }
 
 .App {
-  text-align: center;
   height: 100%;
 }
 #root {
@@ -80,7 +79,9 @@
 
 html,
 body {
-  color: var(--text);
+  /* 
+  color: var(--text); */
+  text-align: left;
   background-color: var(--bg);
   height: 100%;
   font-size: 16px;
@@ -328,19 +329,29 @@ code {
 }
 
 /* ------------------- summary & details ------------------- */
-details > summary {
-  list-style-type: "[+] ";
+#content-bottom {
+  color: white;
 }
-
-details[open] > summary {
-  list-style-type: "[-] ";
-  color: var(--colour-rose);
-}
-
-details {
+.project-button {
+  text-align: left;
   padding: 0.5rem;
+  /* background-color: var(--colour-gold); */
+  color: white;
+  background-color: var(--bg);
+  border: var(--border) double;
+  margin-bottom: 0.55rem;
+}
+.project-button:last-child {
+  margin-bottom: 0rem;
 }
 
-details[open] > summary {
-  margin-bottom: 0.5rem;
+.project-button:hover {
+  background-color: white;
+  color: var(--colour-rose-dark);
+  border: var(--border) double;
+  transition: all 300ms ease-in-out;
+}
+
+.project-button::before {
+  content: "[ + ]   ";
 }

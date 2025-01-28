@@ -2,12 +2,9 @@ import React from 'react';
 let jsonData = require("../projects/projects.json");
 jsonData.sort(function (a, b) {
   //return a[0] - b[0];
-  if (a[0] == b[0])
-    return 0;
-  if (a[0] < b[0])
-    return -1;
-  if (a[0] > b[0])
-    return 1;
+  if (a[0] === b[0]) return 0;
+  if (a[0] < b[0]) return -1;
+  return 1;
 });
 
 class ProjectsUp extends React.Component {
@@ -16,7 +13,7 @@ class ProjectsUp extends React.Component {
 
     return (
       <div>
-        <div className="projects" id="projects-bottom">
+        <div className="projects" id="projects-header">
           Projects
         </div>
         <div className="project-name">Current Project: {currentProject[0]}</div>
@@ -39,7 +36,7 @@ class ProjectsDown extends React.Component {
 
   render() {
     return (
-      <div className="projects" id="projects-header">
+      <div className="projects" id="projects-bottom ">
         {jsonData.map((item, index) => (
           <div
             className="project-button"

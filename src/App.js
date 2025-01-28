@@ -1,5 +1,10 @@
 import React from 'react';
 import './App.css';
+import { WhoAmIUp, WhoAmIDown } from './components/WhoAmI'
+import { AcademicsUp, AcademicsDown } from './components/Academics'
+import { ContactUp, ContactDown } from './components/Contact'
+import { ProjectsUp, ProjectsDown } from './components/Projects'
+import { SkillsUp, SkillsDown } from './components/Skills'
 
 class MenuClass extends React.Component {
   constructor(props) {
@@ -38,11 +43,17 @@ MenuClass.defaultProps = {
 };
 
 function App() {
-  const [currentMenu, setCurrentMenu] = React.useState('whoami'); // Initialize with the first menu item
+  const [currentMenu, setCurrentMenu] = React.useState(''); // Manage current menu state
+  const [currentProject, setCurrentProject] = React.useState(''); // Manage current project state
 
   // Handler to update state when the menu changes
   const handleMenuChange = (menu) => {
     setCurrentMenu(menu);
+  };
+
+  // Handler to update the current project
+  const handleProjectChange = (project) => {
+    setCurrentProject(project);
   };
 
   // Unified function to get content for both header and bottom
@@ -50,33 +61,35 @@ function App() {
     switch (currentMenu) {
       case 'whoami':
         return {
-          header: <div>This is the Who Am I section.</div>,
-          bottom: <div>Details about Who Am I.</div>,
+          header: <WhoAmIUp />,
+          bottom: <WhoAmIDown />,
         };
       case 'academics':
         return {
-          header: <div>This is the Academics section.</div>,
-          bottom: <div>Details about Academics.</div>,
+          header: <AcademicsUp />,
+          bottom: <AcademicsDown />,
         };
       case 'skills':
         return {
-          header: <div>This is the Skills section.</div>,
-          bottom: <div>Details about Skills.</div>,
+          header: <SkillsUp />,
+          bottom: <SkillsDown />,
         };
       case 'projects':
         return {
-          header: <div>This is the Projects section.</div>,
-          bottom: <div>Details about Projects.</div>,
+          // Pass currentProject as a prop to ProjectsUp
+          header: <ProjectsUp currentProject={currentProject} />,
+          // Pass handleProjectChange as a prop to ProjectsDown
+          bottom: <ProjectsDown onProjectChange={handleProjectChange} />,
         };
       case 'contact':
         return {
-          header: <div>This is the Contact section.</div>,
-          bottom: <div>Details about Contact.</div>,
+          header: <ContactUp />,
+          bottom: <ContactDown />,
         };
       default:
         return {
-          header: <div>Welcome! Please select a menu item.</div>,
-          bottom: <div>Additional information will be displayed here.</div>,
+          header: <div>Welcome to Tanya.exe!</div>,
+          bottom: <div>Welcome! Please select a menu item.</div>,
         };
     }
   };
@@ -97,14 +110,12 @@ function App() {
             </div>
           </div>
 
-          {/* Pass handleMenuChange to MenuClass */}
           <MenuClass onMenuChange={handleMenuChange} />
         </div>
 
         <div id="content-container">
           <div className="content" id="content-top">
             <header className="App-header">
-              <p>Welcome to Tanya.exe!</p>
               {header}
             </header>
           </div>
@@ -118,3 +129,4 @@ function App() {
 }
 
 export default App;
+

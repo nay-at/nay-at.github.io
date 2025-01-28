@@ -1,38 +1,38 @@
 [
     [
       "Coffee Paws",
-      "Project carried out during my internship at HDM. I was responsible for the overall management of Coffee Paws, including coordinating the team's tasks and monitoring the project's progress. At the same time, I contributed to the 3D modelling and took charge of certain aspects of the development.",
+      "Project carried out during my internship at HDM. I was responsible for the overall management of Coffee Paws, including coordinating the team's tasks and monitoring the project's progress. At the same time, I contributed to the 3D modelling and took charge of certain aspects of the programming.",
       "",
       "Unity / Blender / C#",
-      "2024"
+      "June - August 2024"
     ],
     [
       "AdBlockNot",
       "Game created as part of gamejam 64. This year's theme was 'depth' and the constraint was 'mise en abyme'.",
       "https://21-12exe.itch.io/adblocknot",
       "GDScript / Design",
-      "2024"
+      "February 2024"
     ],
         [
       "3D creation",
       "Small 3D projects created during the 3D Creation course",
       "Crea3D.mp4",
       "Blender",
-      "2023"
+      "September - December 2023"
     ],
     [
       "Animation Animal Crossing",
       "<a href=\"Screenshot_Note_Intention_Assets.pdf\">Short Blender animation produced</a> as part of the 3D Creation course",
       "AC_3D_S3.mp4",
       "Blender",
-      "2023"
+      "December 2023"
     ],
         [
       "Trick or Treat",
       "World created in OpenGL in which the player must avoid will-o'-the-wisp boids within the given time limit \n \nI coded part of the world, but also made the <a href=\"trick_or_treat_modèle.png\">3D models</a>.",
       "https://github.com/2-1-1-2/Projet_MPS",
-      "OpenGL, Blender",
-      "2024 - Now"
+      "OpenGL / Blender",
+      "2024"
     ],
     [
       "UGE explorer",
@@ -42,7 +42,7 @@
       "2024 - Now"
     ],
     [
-      "La liseuse de bonnes aventures <br> <br>(The reader of good adventures)",
+      "La liseuse de bonnes aventures ",
       "A very quick WEB project to illustrate poems written during a writing workshop.",
       "https://la-liseuse-de-bonnes-aventures.netlify.app/",
       "HTML / CSS / JS",
@@ -59,7 +59,7 @@
       "Narai",
       "Design and development of a Japanese language learning website integrating various APIs, with the aim of creating an interactive teaching platform",
       "https://github.com/2-1-1-2/Narai",
-      "VueJS / SCSS",
+      "Vue.js / SCSS",
       "2024 - Now"
     ],
     [

@@ -1,75 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <script type="module">
-      // import * as _main from "./src/main.ts";
-      // import { createWhoami } from "./src/commands/whoami";
-      /* const keyboardEvent = new KeyboardEvent("keydown", {
-        code: "Enter",
-        key: "Enter",
-        charCode: 13,
-        keyCode: 13,
-        view: window,
-        bubbles: true,
-      }); */
-      /*     let choice = document.getElementById("choice");
-    const COMMANDS = _main.COMMANDS;
-    console.log(COMMANDS);
-    for (let prop in COMMANDS) {
-      console.log(COMMANDS[prop]);
-
-      var x = document.createElement("BUTTON");
-      var t = document.createTextNode(COMMANDS[prop]);
-      x.appendChild(t);
-      x.addEventListener("click", function () {
-        console.log("here");
-        document.getElementById("user-input").value += COMMANDS[prop];
-        _main.enterKey();
-      });
-      choice.appendChild(x);
-    }
-
-
-    
-      
-      setTimeout(()=> {
-         _main.writeLines(createWhoami());
-      }
-      ,1000); */
-    </script>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="module" src="./src/main.ts"></script>
-    <link rel="stylesheet" href="src/css/css-reset.css" />
-    <link rel="stylesheet" href="src/css/style.css" />
-
-    <link rel="icon" type="image/x-png" href="/res/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1" />
-    <!-- <script src="https://kit.fontawesome.com/d5effce557.js" crossorigin="anonymous"></script> -->
-    <title>Tanya's portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio-github</title>
   </head>
-
   <body>
-    <main id="main">
-      <div id="bars">
-        <div id="bar-1">Tanya.exe</div>
-        <!-- <div id="bar-2"></div>
-      <div id="bar-3"></div>
-      <div id="bar-4"></div>
-      <div id="bar-5"></div> -->
-        <!-- <div id="menu">
-          <div class="menu">whoami</div>
-          <div class="menu">academics</div>
-          <div class="menu">skills</div>
-          <div class="menu">projects</div>
-          <div class="menu">contact</div>
-        </div> -->
-      </div>
-
-      <div id="content-container"></div>
-    </main>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
-
-  <!-- <script type="module" src="./src/styles.ts"></script> -->
 </html>

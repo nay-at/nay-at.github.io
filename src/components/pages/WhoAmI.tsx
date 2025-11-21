@@ -1,8 +1,8 @@
 export default function WhoAmI({ label }: { label: string }) {
   return (
     <div className="bentoComponents">
-      WhoAmI test<div>a</div>
-      {label}
+      <div className="title">{label} WhoAmI</div>
+      <div className="content">content</div>
     </div>
   );
 }

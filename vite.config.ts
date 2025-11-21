@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react-swc";
 
 import Components from "unplugin-react-components/vite";
@@ -7,6 +8,7 @@ import AutoImport from "unplugin-auto-import/vite";
 export default defineConfig({
   plugins: [
     react(),
+    tailwindcss(),
     Components({
       dts: true,
       dirs: ["src/components"], // racine

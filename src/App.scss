@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+.vt323-regular {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  font-family: "VT323";
+  --main-bg-color-dark: rgb(12, 6, 35);
+  --main-bg-color: rgb(128, 0, 64);
+  --main-bg-color-08: rgba(92, 143, 252, 0.8);
+  --main-bg-color-05: rgba(92, 143, 252, 0.5);
+  --main-bg-color-02: rgba(92, 143, 252, 0.2);
+  --main-bg-color-01: rgba(92, 143, 252, 0.1);
+
+  background-color: rgb(247, 249, 255);
+  /* background-color: rgba(212, 234, 253, 0.743); */
+}
+
+.img-colorize {
+  position: relative;
+  display: inline-block;
+}
+.project,
+.img-colorize img,
+.img-colorize::after,
+.project:hover {
+  transition: 0.6s all linear, 0.6s filter linear;
+  /* & > * {
+    transition: 0.6s all linear, 0.6s -webkit-filter linear, 0.6s background-color linear;
+  } */
+}
+
+.img-colorize::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #880044;
+  mix-blend-mode: soft-light;
+  opacity: 0;
+}
+
+/* .img-colorize img {
+  display: block;
+  filter: grayscale(0%);
+} */
+.project:not(:hover) {
+  .img-colorize img {
+    filter: grayscale(100%);
+  }
+  .img-colorize::after {
+    inset: 0; /* your tint color */
+
+    background-color: #880043;
+    mix-blend-mode: soft-light; /* multiply or 'overlay', 'color', 'soft-light' */
+    opacity: 1;
+  }
+
+  .project_name {
+    opacity: 0;
+  }
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+//
+.project_name {
+  opacity: 0;
+  background-color: rgb(255, 240, 249);
+  width: calc(100% - 3rem);
+  border-radius: 8px;
+  padding: 5px;
+  border: #880043 2px solid;
+  color: #880043;
+  position: relative;
+  bottom: 4rem;
+  left: 1rem;
+  z-index: 10;
+  /* opacity: 1; */
+}

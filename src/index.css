@@ -1,3 +1,4 @@
+@import "tailwindcss";
 :root {
   /*   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -14,6 +15,12 @@
  */
 }
 
+#root {
+  height: 100%;
+  width: 100%;
+  width: min(65%, 65rem);
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -24,11 +31,13 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -45,7 +54,7 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  /* transition: border-color 0.25s; */
 }
 button:hover {
   border-color: #646cff;
@@ -66,4 +75,32 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.project_minia {
+  /*  width: 15rem;
+  height: 15rem; */
+  /* padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: #f9f9f9; */
+  /* 
+  display: flex;
+  flex-wrap: wrap;
+  width: 15rem;
+  height: 15rem;
+  overflow: hidden; */
+  /* border: #1a1a1a 5px solid; */
+}
+
+.minia {
+  /* padding: 0.5rem; */
+  /* border-radius: 1rem; */
+  /* overflow: hidden; */
+  /*   width: 100%;
+  height: 100%; */
+  /* width: 50%;
+  height: 50%; */
+}
+
+.minia img {
+  border-radius: 1rem;
 }

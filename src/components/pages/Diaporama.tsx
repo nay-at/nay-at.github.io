@@ -151,9 +151,7 @@ function Slide({ folder, images, isActive, backgroundColor, titleColor, onClick 
       style={{ opacity: isActive ? "1" : "0", transition: "all 1000ms ease" }}
     >
       <div className="p-10 absolute uppercase text-[4rem]" style={{ color: titleColor }}>
-        <strong>
-          {folder} - {titleColor}
-        </strong>
+        <strong>{folder}</strong>
       </div>
 
       <div className="flex-grow flex items-center justify-center">
@@ -161,14 +159,14 @@ function Slide({ folder, images, isActive, backgroundColor, titleColor, onClick 
           <div>Aucune image</div>
         ) : (
           <div
-            className="w-[100%] h-[100%] max-w-[900px] max-h-[900px] rounded"
+            className="mt-[70%] w-[90%] h-[80%] max-w-[900px] max-h-[900px] rounded"
             style={{
               backgroundImage: `url("${firstImage.url}")`,
               backgroundRepeat: "no-repeat",
               backgroundAttachment: "fixed",
               backgroundPosition: "center",
               backgroundSize: "cover",
-              boxShadow: `0 0 90px 120px ${backgroundColor} inset`,
+              boxShadow: `0 0 70px 90px ${backgroundColor} inset`,
               transition: "all 500ms ease",
             }}
           />
@@ -177,7 +175,10 @@ function Slide({ folder, images, isActive, backgroundColor, titleColor, onClick 
     </div>
   );
 }
-
+//TODO: Tag
+//TODO: Bouton pour accéder directement à un projet précis
+//TODO: affichage de titre (avec couleur qui change ? complémentaire au bg ?  ou bg + clair ? version hsl ?)
+//TODO: affichage de titre (avec couleur qui change ? complémentaire au bg ?  ou bg + clair ? version hsl ?)
 // ===== MAIN COMPONENT =====
 export default function Diaporama({ label }: { label: string }) {
   const readmes = import.meta.glob("../../projects/*/Readme.md", { eager: true, as: "raw" }) as Record<string, string>;
@@ -201,9 +202,6 @@ export default function Diaporama({ label }: { label: string }) {
   const currentFolder = folders[index] || "";
   const currentBgColor = bgColors[currentFolder] || "rgb(250,250,250)";
   const titleColor = "red";
-  {
-    /* TODO: affichage de titre (avec couleur qui change ? complémentaire au bg ?  ou bg + clair ? version hsl ?) */
-  }
 
   return (
     <div

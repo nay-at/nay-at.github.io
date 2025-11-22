@@ -4,8 +4,8 @@ declare global{
 	const App: typeof import('./src/App')['default']
 	const Navbar: typeof import('./src/components/Navbar')['default']
 	const Contact: typeof import('./src/components/pages/Contact')['default']
+	const Diaporama: typeof import('./src/components/pages/Diaporama')['default']
 	const Heatmap: typeof import('./src/components/pages/Heatmap')['default']
-	const Projects: typeof import('./src/components/pages/Projects')['default']
 	const WhoAmI: typeof import('./src/components/pages/WhoAmI')['default']
 	const Button: typeof import('./src/components/utils/Button')['default']
 }

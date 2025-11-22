@@ -18,7 +18,7 @@
 #root {
   height: 100%;
   width: 100%;
-  width: min(65%, 65rem);
+  /* width: min(65%, 65rem); */
 }
 
 a {

@@ -1,16 +1,20 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
-/* import Contact from "./components/pages/Contact";
-import Heatmap from "./components/pages/Heatmap";
-import Projects from "./components/pages/Projects";
-import WhoAmI from "./components/pages/WhoAmI"; */
+import data_json from "./data/projects.json";
+import { useWindowScrollProxy } from "./hooks/useWindowScrollProxy";
 
 export default function App() {
+  const contentRef = useWindowScrollProxy<HTMLDivElement>();
   return (
-    <div className=" w-full h-full">
-      {" "}
-      {/* main */}
-      {/* <Navbar /> */} {/* bentoBox */}
-      <Diaporama></Diaporama>
-    </div>
+    <BrowserRouter>
+      <div className="w-full h-full centerChild">
+        <div ref={contentRef} className="contentContainer h-full overflow-scroll">
+          <Routes>
+            <Route path="/" element={<ProjectsOverview projects={data_json} />} />
+            <Route path="/projects/:urlName" element={<ProjectsOverview projects={data_json} />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }

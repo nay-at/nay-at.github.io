@@ -1,0 +1,211 @@
+[
+  {
+    "title": "3D creation",
+    "date": "2023",
+    "type": ["3D", "Animation"],
+    "technology": ["Blender"],
+    "desc_short": "Small 3D projects created during the 3D Creation course",
+    "description": "<a href=\"Screenshot_Note_Intention_Assets.pdf\">Short Blender animation produced</a> as part of the 3D Creation course",
+    "role": "Étudiant",
+    "link": "",
+    "urlName": "3DCourse"
+  },
+  {
+    "title": "La liseuse de bonnes aventures ",
+    "date": "2022",
+    "type": ["Web"],
+    "technology": ["HTML", "CSS", "JS"],
+    "desc_short": "A very quick WEB project to illustrate poems written during a writing workshop.",
+    "description": "A very quick WEB project to illustrate poems written during a writing workshop.",
+    "role": "Développeur",
+    "link": "https://la-liseuse-de-bonnes-aventures.netlify.app/",
+    "urlName": "la-liseuse-de-bonnes-aventures"
+  },
+  {
+    "title": "AdBlockNot",
+    "date": "2024",
+    "type": ["Design", "Jeu"],
+    "technology": ["GDScript"],
+    "desc_short": "Game created as part of gamejam 64. This year's theme was 'depth' and the constraint was 'mise en abyme'.",
+    "description": "Game created as part of gamejam 64. This year's theme was 'depth' and the constraint was 'mise en abyme'.",
+    "role": "Développeur",
+    "link": "https://21-12exe.itch.io/adblocknot",
+    "urlName": "AdBlockNot"
+  },
+  {
+    "title": "Boups",
+    "date": "",
+    "type": [],
+    "technology": [],
+    "desc_short": "Description non fournie.",
+    "description": "Description non fournie.",
+    "role": "Développeur",
+    "link": "",
+    "urlName": "Boups"
+  },
+  {
+    "title": "CoffeePaws",
+    "date": "",
+    "type": [],
+    "technology": [],
+    "desc_short": "",
+    "description": "",
+    "role": "Développeur",
+    "link": "",
+    "urlName": "CoffeePaws"
+  },
+  {
+    "title": "CoronaSimulator",
+    "date": "",
+    "type": [],
+    "technology": [],
+    "desc_short": "Description non fournie.",
+    "description": "Description non fournie.",
+    "role": "Développeur",
+    "link": "",
+    "urlName": "CoronaSimulator"
+  },
+  {
+    "title": "GhostHunt",
+    "date": "2022",
+    "type": ["Réseau", "Jeu"],
+    "technology": ["C", "Java"],
+    "desc_short": "Multiplayer game project practising TCP/UDP protocols.",
+    "description": "Participation in a network programming project aimed at putting into practice the concepts studied in class (TCP and UDP protocols). The aim was to develop a multiplayer game with the ability to create simultaneous games and facilitate communication between players via an integrated messaging system.",
+    "role": "Développeur",
+    "link": "https://github.com/2-1-1-2/Ghost-Hunt",
+    "urlName": "GhostHunt"
+  },
+  {
+    "title": "Incognito",
+    "date": "",
+    "type": [],
+    "technology": [],
+    "desc_short": "",
+    "description": "",
+    "role": "Développeur",
+    "link": "",
+    "urlName": "Incognito"
+  },
+  {
+    "title": "Infinite Loop",
+    "date": "2022",
+    "type": ["Art", "Simulation"],
+    "technology": ["P5JS"],
+    "desc_short": "Creating a loop using boids to highlight climate issues.",
+    "description": "Creating a loop using boids to highlight climate issues.",
+    "role": "Développeur",
+    "link": "https://github.com/2-1-1-2/Boids/blob/main/Animation_Boids_LOOP.gif",
+    "urlName": "InfiniteLoop"
+  },
+  {
+    "title": "LLDBAV",
+    "date": "",
+    "type": [],
+    "technology": [],
+    "desc_short": "Description non fournie.",
+    "description": "Description non fournie.",
+    "role": "Développeur",
+    "link": "",
+    "urlName": "LLDBAV"
+  },
+  {
+    "title": "LightCorridor",
+    "date": "2023",
+    "type": ["Jeu", "Synthesis d'image"],
+    "technology": ["GLFW", "C++"],
+    "desc_short": "3D game created for the Image Synthesis course.",
+    "description": "As a project for the 'Image Synthesis' course, we had to create a 3D game in which we travelled a long path full of obstacles using a ball.",
+    "role": "Développeur",
+    "link": "https://github.com/2-1-1-2/The-IMAC-Light-Corridor",
+    "urlName": "LightCorridor"
+  },
+  {
+    "title": "Narai",
+    "date": "2024 - Now",
+    "type": ["Web", "Éducation"],
+    "technology": ["VueJS", "SCSS"],
+    "desc_short": "Japanese language learning website integrating various APIs.",
+    "description": "Design and development of a Japanese language learning website integrating various APIs, with the aim of creating an interactive teaching platform",
+    "role": "Développeur",
+    "link": "https://github.com/2-1-1-2/Narai",
+    "urlName": "Narai"
+  },
+  {
+    "title": "OCRJapanese",
+    "date": "",
+    "type": [],
+    "technology": [],
+    "desc_short": "Description non fournie.",
+    "description": "Description non fournie.",
+    "role": "Développeur",
+    "link": "",
+    "urlName": "OCRJapanese"
+  },
+  {
+    "title": "Occuloss",
+    "date": "",
+    "type": [],
+    "technology": [],
+    "desc_short": "",
+    "description": "",
+    "role": "Développeur",
+    "link": "",
+    "urlName": "Occuloss"
+  },
+  {
+    "title": "PetRescue",
+    "date": "",
+    "type": [],
+    "technology": [],
+    "desc_short": "Description non fournie.",
+    "description": "Description non fournie.",
+    "role": "Développeur",
+    "link": "",
+    "urlName": "PetRescue"
+  },
+  {
+    "title": "PokImac",
+    "date": "",
+    "type": [],
+    "technology": [],
+    "desc_short": "Description non fournie.",
+    "description": "Description non fournie.",
+    "role": "Développeur",
+    "link": "",
+    "urlName": "PokImac"
+  },
+  {
+    "title": "Recette",
+    "date": "",
+    "type": [],
+    "technology": [],
+    "desc_short": "",
+    "description": "",
+    "role": "Développeur",
+    "link": "",
+    "urlName": "Recette"
+  },
+  {
+    "title": "TrickOrTreat",
+    "date": "",
+    "type": ["Jeu"],
+    "technology": ["OpenGL", "Blender"],
+    "desc_short": "World created in OpenGL",
+    "description": "World created in OpenGL in which the player must avoid will-o'-the-wisp boids within the given time limit \n \nI coded part of the world, but also made the <a href=\"trick_or_treat_modèle.png\">3D models</a>.",
+    "role": "Développeur",
+    "link": "https://github.com/2-1-1-2/Projet_MPS",
+    "urlName": "TrickOrTreat"
+  },
+  {
+    "title": "UGExplorer",
+    "date": "2024",
+    "type": ["Application mobile", "Design"],
+    "technology": ["Vue.js", "SCSS"],
+    "desc_short": "Digital guided tour",
+    "description": "Digital guided tour of the campus. Creation a website using VueJS and its design. We also created the itineraries for visiting the Descartes campus (Champs-sur-Marne).",
+    "role": "Développeur",
+    "link": "https://ugexplorer.netlify.app/",
+    "urlName": "UGExplorer"
+  }
+]

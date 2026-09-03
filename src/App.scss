@@ -1,85 +1,182 @@
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
-.vt323-regular {
-  font-family: "VT323", monospace;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+.roboto-mono-regular {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-:root {
-  font-family: "VT323";
-  --main-bg-color-dark: rgb(12, 6, 35);
-  --main-bg-color: rgb(128, 0, 64);
-  --main-bg-color-08: rgba(92, 143, 252, 0.8);
-  --main-bg-color-05: rgba(92, 143, 252, 0.5);
-  --main-bg-color-02: rgba(92, 143, 252, 0.2);
-  --main-bg-color-01: rgba(92, 143, 252, 0.1);
+#root {
+  overflow: hidden;
+}
 
-  background-color: rgb(247, 249, 255);
+:root {
+  font-family: "Roboto Mono";
+  --color-dark: rgb(85, 90, 146);
+  --color-dark-alt: rgb(34, 24, 49);
+  --main-color: rgb(214, 217, 247);
+  --main-color-light: rgb(233, 234, 251);
+  --main-color-alt: #ac9df1;
+  --color-white: #fafafa;
+  color: var(--color-dark);
+  background-color: var(--color-white);
   /* background-color: rgba(212, 234, 253, 0.743); */
 }
 
-.img-colorize {
-  position: relative;
-  display: inline-block;
-}
-.project,
-.img-colorize img,
-.img-colorize::after,
-.project:hover {
-  transition: 0.6s all linear, 0.6s filter linear;
-  /* & > * {
-    transition: 0.6s all linear, 0.6s -webkit-filter linear, 0.6s background-color linear;
-  } */
+a {
+  color: rgb(34, 24, 49);
 }
 
-.img-colorize::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: #880044;
-  mix-blend-mode: soft-light;
-  opacity: 0;
+.Projects-Overview {
+  margin: 0px 2em;
 }
 
-/* .img-colorize img {
+.contentMargin {
+  margin: 2em;
+}
+
+.Bar-Separator {
+  background-color: transparent;
+  border: 0;
+  border-top: 1px solid var(--main-color-light);
   display: block;
-  filter: grayscale(0%);
-} */
-.project:not(:hover) {
-  .img-colorize img {
-    filter: grayscale(100%);
-  }
-  .img-colorize::after {
-    inset: 0; /* your tint color */
+  height: 0;
+  margin: 1rem auto 1rem;
+  text-align: center;
+  width: 50%;
+}
 
-    background-color: #880043;
-    mix-blend-mode: soft-light; /* multiply or 'overlay', 'color', 'soft-light' */
-    opacity: 1;
-  }
+.contentContainer {
+  width: 800px;
+  margin: 0px 2em;
+  border: 1px solid var(--main-color-light);
+  border-top: 2em solid var(--color-white);
+  border-bottom: 2em solid var(--color-white); /*  */
+}
 
-  .project_name {
+.Project-Head {
+  text-transform: uppercase;
+}
+
+.Project-Title {
+  font-size: 16px;
+}
+
+//TODO: RENDRE CA SMOOTH
+details summary {
+  cursor: pointer;
+}
+
+#myHeader {
+  background: var(--color-white);
+  border-bottom: #ac9df1 solid 1px;
+
+  z-index: 9999;
+
+  /* autres styles */
+}
+.stickyy {
+  padding: 1em 2em;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+}
+details[open] summary ~ * {
+  animation: sweep 1s ease-in-out;
+}
+
+@keyframes sweep {
+  0% {
+    margin-top: 10px;
     opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
 }
 
-.main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.tag.Filter-Tag {
+  border: 1px solid var(--main-color-light);
+  background-color: var(--color-white);
+  &-active {
+    background-color: var(--main-color-light);
+  }
 }
 
-//
-.project_name {
-  opacity: 0;
-  background-color: rgb(255, 240, 249);
-  width: calc(100% - 3rem);
+.tag {
+  font-size: 12px;
+  background-color: var(--main-color-light);
+  padding: 1px 8px;
   border-radius: 8px;
-  padding: 5px;
-  border: #880043 2px solid;
-  color: #880043;
-  position: relative;
-  bottom: 4rem;
-  left: 1rem;
-  z-index: 10;
-  /* opacity: 1; */
+  &:hover {
+    background-color: var(--main-color);
+  }
+}
+
+.Project-Diaporama {
+  width: 100%;
+  height: 400px;
+}
+
+/* .Project-Prebody::after {
+  content: "***";
+} */
+
+.centerChild {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Project-Diaporama-pill {
+  background-color: var(--color-white);
+  padding: 2px 5px;
+  &-active {
+    background-color: var(--main-color);
+  }
+}
+
+* {
+  transition: all 0.5s;
+}
+
+.Project-Diaporama {
+  .Project-Diaporama-img {
+    /* -webkit-filter: grayscale(1) opacity(0.8);
+     */
+    filter: grayscale(1);
+  }
+
+  span.test::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    position: absolute;
+    background: rgba(157, 164, 241, 0.37);
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  .Project-Diaporama-arrow {
+    background-color: transparent;
+    color: transparent;
+    border: none;
+  }
+
+  &:hover {
+    .Project-Diaporama-arrow {
+      z-index: 10;
+      background-color: transparent;
+      padding: 2px;
+      color: rgb(193, 197, 249);
+      font-size: 4em;
+
+      &:hover {
+        color: var(--color-white);
+      }
+    }
+  }
 }

@@ -1,0 +1,114 @@
+[
+    [
+      "Coffee Paws",
+      "Project carried out during my internship at HDM. I was responsible for the overall management of Coffee Paws, including coordinating the team's tasks and monitoring the project's progress. At the same time, I contributed to the 3D modelling and took charge of certain aspects of the programming.",
+      "",
+      "Unity / Blender / C#",
+      "June - August 2024"
+    ],
+    [
+      "AdBlockNot",
+      "Game created as part of gamejam 64. This year's theme was 'depth' and the constraint was 'mise en abyme'.",
+      "https://21-12exe.itch.io/adblocknot",
+      "GDScript / Design",
+      "February 2024"
+    ],
+        [
+      "3D creation",
+      "Small 3D projects created during the 3D Creation course",
+      "Crea3D.mp4",
+      "Blender",
+      "September - December 2023"
+    ],
+    [
+      "Animation Animal Crossing",
+      "<a href=\"Screenshot_Note_Intention_Assets.pdf\">Short Blender animation produced</a> as part of the 3D Creation course",
+      "AC_3D_S3.mp4",
+      "Blender",
+      "December 2023"
+    ],
+        [
+      "Trick or Treat",
+      "World created in OpenGL in which the player must avoid will-o'-the-wisp boids within the given time limit \n \nI coded part of the world, but also made the <a href=\"trick_or_treat_modèle.png\">3D models</a>.",
+      "https://github.com/2-1-1-2/Projet_MPS",
+      "OpenGL / Blender",
+      "2024"
+    ],
+    [
+      "UGE explorer",
+      "Digital guided tour of the campus. Creation a website using VueJS and its design. We also created the itineraries for visiting the Descartes campus (Champs-sur-Marne).",
+      "https://ugexplorer.netlify.app/",
+      "Vue.js / SCSS / Design",
+      "2024 - Now"
+    ],
+    [
+      "La liseuse de bonnes aventures ",
+      "A very quick WEB project to illustrate poems written during a writing workshop.",
+      "https://la-liseuse-de-bonnes-aventures.netlify.app/",
+      "HTML / CSS / JS",
+      "2022"
+    ],
+    [
+      "GhostHunt",
+      "Participation in a network programming project aimed at putting into practice the concepts studied in class (TCP and UDP protocols). The aim was to develop a multiplayer game with the ability to create simultaneous games and facilitate communication between players via an integrated messaging system.",
+      "https://github.com/2-1-1-2/Ghost-Hunt",
+      "C / Java",
+      "2022"
+    ],
+    [
+      "Narai",
+      "Design and development of a Japanese language learning website integrating various APIs, with the aim of creating an interactive teaching platform",
+      "https://github.com/2-1-1-2/Narai",
+      "Vue.js / SCSS",
+      "2024 - Now"
+    ],
+    [
+      "Light Corridor",
+      "As a project for the 'Image Synthesis' course, we had to create a 3D game in which we travelled a long path full of obstacles using a ball.",
+      "https://github.com/2-1-1-2/The-IMAC-Light-Corridor",
+      "GLFW / C++",
+      "2023"
+    ],
+    [
+      "Infinite Loop",
+      "Creating a loop using boids to highlight climate issues.",
+      "https://github.com/2-1-1-2/Boids/blob/main/Animation_Boids_LOOP.gif",
+      "P5JS",
+      "2022"
+    ],
+    [
+      "Boups",
+      "-",
+      "-",
+      "-",
+      "-"
+    ],
+    [
+      "Corona Simulator",
+      "-",
+      "-",
+      "-",
+      "-"
+    ],
+    [
+      "Japanese OCR",
+      "-",
+      "-",
+      "-",
+      "-"
+    ],
+    [
+      "Pet Rescue",
+      "-",
+      "-",
+      "-",
+      "-"
+    ],
+    [
+      "Recette",
+      "-",
+      "-",
+      "-",
+      "-"
+    ]
+]

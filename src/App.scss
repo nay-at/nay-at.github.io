@@ -47,12 +47,14 @@ a {
   width: 50%;
 }
 
-.contentContainer {
-  max-width: 800px;
-  margin: 0px 2em;
-  border: 1px solid var(--main-color-light);
-  border-top: 2em solid var(--color-white);
-  border-bottom: 2em solid var(--color-white); /*  */
+@media screen and (min-width: 800px) {
+  .contentContainer {
+    max-width: 800px;
+    margin: 0px 2em;
+    border: 1px solid var(--main-color-light);
+    border-top: 2em solid var(--color-white);
+    border-bottom: 2em solid var(--color-white); /*  */
+  }
 }
 
 .Project-Head {
@@ -118,7 +120,12 @@ details[open] summary ~ * {
 
 .Project-Diaporama {
   width: 100%;
-  height: 400px;
+  height: 200px;
+  object-fit: cover;
+
+  @media screen and (min-width: 600px) {
+    height: 400px;
+  }
 }
 
 /* .Project-Prebody::after {
@@ -154,6 +161,8 @@ details[open] summary ~ * {
     content: "";
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    max-height: 400px;
     z-index: 5;
     position: absolute;
     background: rgba(157, 164, 241, 0.37);

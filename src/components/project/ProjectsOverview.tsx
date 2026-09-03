@@ -124,28 +124,28 @@ export const ProjectsOverview: React.FC<ProjectProps> = ({ projects }: ProjectPr
         {/* Contenu du header */}
         <h2>PROFIL</h2>
         <div>PROFIL</div>
+        <details className=" details-animated ">
+          <summary>Filtre</summary>
+          <ProjectsFilterBar
+            availableTypes={availableTypes}
+            availableTechnologies={availableTechnologies}
+            selectedTypes={selectedTypes}
+            selectedTechnologies={selectedTechnologies}
+            mode={mode}
+            sortField={sortField}
+            sortDirection={sortDirection}
+            onToggleType={(v) => setSelectedTypes((s) => toggleInSet(s, v))}
+            onToggleTechnology={(v) => setSelectedTechnologies((s) => toggleInSet(s, v))}
+            onModeChange={setMode}
+            onSortFieldChange={setSortField}
+            onSortDirectionToggle={() => setSortDirection((d) => (d === "asc" ? "desc" : "asc"))}
+            onReset={() => {
+              setSelectedTypes(new Set());
+              setSelectedTechnologies(new Set());
+            }}
+          />
+        </details>
       </header>
-      <details className="contentMargin details-animated ">
-        <summary>Filtre</summary>
-        <ProjectsFilterBar
-          availableTypes={availableTypes}
-          availableTechnologies={availableTechnologies}
-          selectedTypes={selectedTypes}
-          selectedTechnologies={selectedTechnologies}
-          mode={mode}
-          sortField={sortField}
-          sortDirection={sortDirection}
-          onToggleType={(v) => setSelectedTypes((s) => toggleInSet(s, v))}
-          onToggleTechnology={(v) => setSelectedTechnologies((s) => toggleInSet(s, v))}
-          onModeChange={setMode}
-          onSortFieldChange={setSortField}
-          onSortDirectionToggle={() => setSortDirection((d) => (d === "asc" ? "desc" : "asc"))}
-          onReset={() => {
-            setSelectedTypes(new Set());
-            setSelectedTechnologies(new Set());
-          }}
-        />
-      </details>
 
       {visibleProjects.length === 0 ? (
         <div className="Projects-Overview-empty contentMargin">Aucun projet ne correspond aux filtres.</div>
@@ -171,7 +171,8 @@ function ProjectDetails({ description, role, date, link = "" }: ProjectDetailsPr
           <div className="basis-1/5">description</div>
           <div className={`Bar-Separator basis-4/5`}></div>
         </div>
-        {description}
+
+        <div dangerouslySetInnerHTML={{ __html: `${description}` }} />
       </div>
       <div className="Project-Role pt-10">
         <div className="flex flex-row pb-5">
@@ -182,10 +183,12 @@ function ProjectDetails({ description, role, date, link = "" }: ProjectDetailsPr
       </div>
       <div className="Project-Link pt-10">
         <div className="flex flex-row pb-5">
-          <div className="basis-1/5">Link</div>
           <div className={`Bar-Separator basis-4/5`}></div>
+          <div className=" text-right p-1 flex flex-wrap justify-end gap-1"></div>
+          <span className=" tag">
+            <a href={link}>Voir le projet</a>
+          </span>
         </div>
-        {link}
       </div>
     </div>
   );
@@ -207,9 +210,21 @@ function ProjectHeader({ title, type, technology, show_body, desc_short, urlName
   return (
     <div className="Project-Header  contentMargin">
       <div className="Project-Head flex flex-row pb-5 ">
-        <div className="Project-Title  text-left p-1 ">{title}</div>
-        <div className={`Bar-Separator ${type.length > 0 ? "basis-3/5" : "basis-4/5"}`}></div>
-        <div className={`Project-Type ${type.length > 0 ? "basis-1/5" : ""}  text-right p-1 flex flex-wrap justify-end gap-1`}>
+        <div className="Project-Title basis-1/5 text-left p-1 ">{title}</div>
+        <div className={`Bar-Separator basis-4/5`}></div>
+      </div>
+      <ProjectDiaporama images={images} alt={title} autoPlay={true} />
+
+      <div className={`Project-Head flex flex-row ${type.length > 0 && technology.length > 0 ? "pb-5 pt-5 " : ""}   `}>
+        <div className={`Project-Technology text-left basis-2/5 p-1 gap-1 flex flex-wrap `}>
+          {technology.map((t) => (
+            <span key={t} className="Project-Type-tag tag p-1">
+              {t}
+            </span>
+          ))}
+        </div>
+        <div className={`Bar-Separator ${type.length > 0 && technology.length > 0 ? "basis-1/5" : "collapse"}`}></div>
+        <div className={`Project-Type   text-right p-1  flex flex-wrap justify-end gap-1 basis-2/5`}>
           {type.map((t) => (
             <span key={t} className="Project-Type-tag tag">
               {t}
@@ -217,27 +232,26 @@ function ProjectHeader({ title, type, technology, show_body, desc_short, urlName
           ))}
         </div>
       </div>
-      <ProjectDiaporama images={images} alt={title} autoPlay={true} />
-
+      {/* 
       <div className={`Project-Technology ${technology.length > 0 ? "basis-1/5" : ""}  text-left mt-5  mb-5 gap-2 flex flex-wrap`}>
         {technology.map((t) => (
           <span key={t} className="Project-Type-tag tag p-1">
             {t}
           </span>
         ))}
-      </div>
+      </div> */}
 
       {!show_body && (
-        <div>
-          <div>{desc_short}</div>
-          <div className="Project-Prebody flex flex-row pb-5 ">
-            <div className={`Bar-Separator basis-4/5`}></div>
+        <div className="pb-5 ">
+          <div dangerouslySetInnerHTML={{ __html: `${desc_short}` }} />
+          <div className="Project-Prebody flex flex-row  ">
+            <div className={` basis-4/5`}></div>
 
             <Link to={`/projects/${urlName}`} className="Project-Title basis-1/5 text-right p-1 block">
               + de détails
             </Link>
           </div>
-          <div className="Project-Prebody flex flex-col items-center ">***</div>
+          <div className="Project-Prebody flex flex-col items-center pt-5">***</div>
         </div>
       )}
     </div>

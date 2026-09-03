@@ -8,7 +8,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <div className="w-full h-full centerChild">
-        <div ref={contentRef} className="contentContainer h-full overflow-scroll">
+        {/* grand écran max 800px */}
+        <div ref={contentRef} className="contentContainer  h-full overflow-scroll">
           <Routes>
             <Route path="/" element={<ProjectsOverview projects={data_json} />} />
             <Route path="/projects/:urlName" element={<ProjectsOverview projects={data_json} />} />

@@ -48,7 +48,7 @@ a {
 }
 
 .contentContainer {
-  width: 800px;
+  max-width: 800px;
   margin: 0px 2em;
   border: 1px solid var(--main-color-light);
   border-top: 2em solid var(--color-white);
@@ -107,7 +107,9 @@ details[open] summary ~ * {
 .tag {
   font-size: 12px;
   background-color: var(--main-color-light);
-  padding: 1px 8px;
+  padding: 5px 8px;
+  text-transform: uppercase;
+
   border-radius: 8px;
   &:hover {
     background-color: var(--main-color);

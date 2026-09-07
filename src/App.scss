@@ -72,7 +72,7 @@ details summary {
 
 #myHeader {
   background: var(--color-white);
-  border-bottom: #ac9df1 solid 1px;
+  border-bottom: #f0eef867 solid 1px;
 
   z-index: 9999;
 
@@ -98,24 +98,25 @@ details[open] summary ~ * {
   }
 }
 
-.tag.Filter-Tag {
+/* .tag.Filter-Tag {
   border: 1px solid var(--main-color-light);
   background-color: var(--color-white);
   &-active {
     background-color: var(--main-color-light);
   }
 }
-
+ */
 .tag {
   font-size: 12px;
-  background-color: var(--main-color-light);
+  border: 1px solid var(--main-color-light);
+  background-color: var(--color-white);
   padding: 5px 8px;
   text-transform: uppercase;
 
   border-radius: 8px;
-  &:hover {
-    background-color: var(--main-color);
-  }
+  /* &:hover {
+    background-color: var(--main-color-light);
+  } */
 }
 
 .Project-Diaporama {
@@ -139,6 +140,7 @@ details[open] summary ~ * {
 }
 
 .Project-Diaporama-pill {
+  border: 0.5px solid #846fe4;
   background-color: var(--color-white);
   padding: 2px 5px;
   &-active {

@@ -3,6 +3,7 @@ export {}
 declare global{
 	const App: typeof import('./src/App')['default']
 	const Diaporama: typeof import('./src/components/pages/Diaporama')['default']
+	const Profile: typeof import('./src/components/profile/Profile')['Profile']
 	const ProjectDiaporama: typeof import('./src/components/project/ProjectDiaporama')['ProjectDiaporama']
 	const ProjectsFilterBar: typeof import('./src/components/project/ProjectsFilterBar')['ProjectsFilterBar']
 	const ProjectsOverview: typeof import('./src/components/project/ProjectsOverview')['ProjectsOverview']

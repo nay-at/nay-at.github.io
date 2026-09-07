@@ -47,7 +47,7 @@ export function ProjectDiaporama({ images, alt = "", autoPlay = false, autoPlayI
   }, [current, images.length, transitionDuration]);
 
   if (images.length === 0) {
-    return <span className="Project-Diaporama-empty">Aucune image disponible</span>;
+    return <span className=""></span>; /* Project-Diaporama-empty text-center */ /* [ * * * ] */
   }
 
   return (

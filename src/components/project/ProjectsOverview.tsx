@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { ProjectsFilterBar, type FilterMode, type SortField, type SortDirection } from "./ProjectsFilterBar";
 
 // Vite indexe ces fichiers au build : aucune liste à maintenir manuellement.
-const projectImages = import.meta.glob<string>("/public/projects/**/*.{png,jpg,jpeg,webp,gif,avif}", { eager: true, import: "default" });
+const projectImages = import.meta.glob<string>("/public/projects/**/preview/*.{png,jpg,jpeg,webp,gif,avif}", { eager: true, import: "default" });
 
 function getProjectImages(title: string) {
   return Object.entries(projectImages)
@@ -27,7 +27,15 @@ const ProjectItem: React.FC<Project> = ({
 }: Project) => {
   return (
     <div className="Project-Overview ">
-      <ProjectHeader title={title} type={type} technology={technology} show_body={show_body} desc_short={desc_short} urlName={urlName} />
+      <ProjectHeader
+        title={title}
+        type={type}
+        technology={technology}
+        show_body={show_body}
+        desc_short={desc_short}
+        description={description}
+        urlName={urlName}
+      />
       {show_body && <ProjectDetails description={description} role={role} date={date} link={link} />}
     </div>
   );
@@ -120,12 +128,11 @@ export const ProjectsOverview: React.FC<ProjectProps> = ({ projects }: ProjectPr
 
   return (
     <div className="Projects-Overview ">
-      <header id="myHeader" className="stickyy ">
+      <header id="myHeader" className="stickyy flex flex-row">
         {/* Contenu du header */}
-        <h2>PROFIL</h2>
-        <div>PROFIL</div>
-        <details className=" details-animated ">
-          <summary>Filtre</summary>
+        <Profile></Profile>
+        <details className="text-right details-animated  basis-5/5">
+          <summary>Filter</summary>
           <ProjectsFilterBar
             availableTypes={availableTypes}
             availableTechnologies={availableTechnologies}
@@ -201,17 +208,18 @@ interface ProjectHeaderProps {
   show_body: boolean;
   desc_short: string;
   urlName: string;
+  description: string;
 }
 import { Link } from "react-router-dom";
 
-function ProjectHeader({ title, type, technology, show_body, desc_short, urlName }: ProjectHeaderProps) {
+function ProjectHeader({ title, type, technology, show_body, desc_short, urlName, description }: ProjectHeaderProps) {
   const images = getProjectImages(urlName);
 
   return (
     <div className="Project-Header  contentMargin">
       <div className="Project-Head flex flex-row pb-5 ">
-        <div className="Project-Title basis-1/5 text-left p-1 ">{title}</div>
-        <div className={`Bar-Separator basis-4/5`}></div>
+        <div className="Project-Title  text-left p-1 ">[{title}]</div>
+        {/* <div className={`Bar-Separator basis-6/10`}></div> */}
       </div>
       <ProjectDiaporama images={images} alt={title} autoPlay={true} />
 
@@ -223,7 +231,7 @@ function ProjectHeader({ title, type, technology, show_body, desc_short, urlName
             </span>
           ))}
         </div>
-        <div className={`Bar-Separator ${type.length > 0 && technology.length > 0 ? "basis-1/5" : "collapse"}`}></div>
+        <div className={`Bar Separator ${type.length > 0 && technology.length > 0 ? "basis-1/5" : "collapse"}`}></div>
         <div className={`Project-Type   text-right p-1  flex flex-wrap justify-end gap-1 basis-2/5`}>
           {type.map((t) => (
             <span key={t} className="Project-Type-tag tag">
@@ -244,13 +252,15 @@ function ProjectHeader({ title, type, technology, show_body, desc_short, urlName
       {!show_body && (
         <div className="pb-5 ">
           <div dangerouslySetInnerHTML={{ __html: `${desc_short}` }} />
-          <div className="Project-Prebody flex flex-row  ">
-            <div className={` basis-4/5`}></div>
+          {description.length > 0 && (
+            <div className="Project-Prebody flex flex-row  ">
+              <div className={` basis-4/5`}></div>
 
-            <Link to={`/projects/${urlName}`} className="Project-Title basis-1/5 text-right p-1 block">
-              + de détails
-            </Link>
-          </div>
+              <Link to={`/projects/${urlName}`} className="Project-Title basis-1/5 text-right p-1 block">
+                + de détails
+              </Link>
+            </div>
+          )}
           <div className="Project-Prebody flex flex-col items-center pt-5">***</div>
         </div>
       )}

@@ -6,6 +6,7 @@ import Components from "unplugin-react-components/vite";
 import AutoImport from "unplugin-auto-import/vite";
 
 export default defineConfig({
+  base: "/nay-at.github.io",
   plugins: [
     react(),
     tailwindcss(),
@@ -16,7 +17,7 @@ export default defineConfig({
       deep: true, // sous-dossiers
       directoryAsNamespace: false, // sinon WhoAmI sera sous pages-WhoAmI
       include: [/\.tsx$/],
-    }),
+    } as any),
     AutoImport({
       dts: "./auto-imports.d.ts",
       include: [/\.[tj]sx?$/],

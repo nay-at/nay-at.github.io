@@ -1,5 +1,3 @@
-import React from "react";
-
 export type FilterMode = "and" | "or";
 export type SortField = "title" | "date" | "type" | "technology";
 export type SortDirection = "asc" | "desc";

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 interface ProjectDiaporamaProps {
@@ -11,7 +11,7 @@ interface ProjectDiaporamaProps {
 
 export function ProjectDiaporama({ images, alt = "", autoPlay = false, autoPlayInterval = 6000, transitionDuration = 0.1 }: ProjectDiaporamaProps) {
   const [current, setCurrent] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(autoPlay);
+  const [isPlaying /* , setIsPlaying */] = useState(autoPlay);
   const trackRef = useRef<HTMLDivElement | null>(null);
   const isFirstRender = useRef(true);
 

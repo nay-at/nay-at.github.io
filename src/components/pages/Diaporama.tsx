@@ -180,7 +180,7 @@ function Slide({ folder, images, isActive, backgroundColor, titleColor, onClick 
 //TODO: affichage de titre (avec couleur qui change ? complémentaire au bg ?  ou bg + clair ? version hsl ?)
 //TODO: affichage de titre (avec couleur qui change ? complémentaire au bg ?  ou bg + clair ? version hsl ?)
 // ===== MAIN COMPONENT =====
-export default function Diaporama({ label }: { label: string }) {
+export default function Diaporama(/* { label }: { label: string } */) {
   const readmes = import.meta.glob("../../projects/*/Readme.md", { eager: true, as: "raw" }) as Record<string, string>;
 
   const imageModules = import.meta.glob("../../projects/*/*.{png,jpg,jpeg,gif,svg,webp}", { eager: true, as: "url" }) as Record<string, string>;

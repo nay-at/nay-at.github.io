@@ -170,7 +170,8 @@ interface ProjectDetailsProps {
   link: string;
 }
 
-function ProjectDetails({ description, role, date, link = "" }: ProjectDetailsProps) {
+function ProjectDetails({ description, role, link = "" }: ProjectDetailsProps) {
+  /* rajouter date plus tard  */
   return (
     <div className="Project-Details contentMargin">
       <div className="Project-Description">
@@ -211,6 +212,7 @@ interface ProjectHeaderProps {
   description: string;
 }
 import { Link } from "react-router-dom";
+import Profile from "../profile/Profile";
 
 function ProjectHeader({ title, type, technology, show_body, desc_short, urlName, description }: ProjectHeaderProps) {
   const images = getProjectImages(urlName);

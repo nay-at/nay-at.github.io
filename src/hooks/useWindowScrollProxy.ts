@@ -1,4 +1,5 @@
-import { useEffect, useRef, RefObject } from "react";
+import { useEffect, useRef } from "react";
+import type { RefObject } from "react";
 
 /**
  * Redirige tout scroll (molette + swipe tactile) qui arrive n'importe où sur la
